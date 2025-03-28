@@ -6,7 +6,15 @@
     <description>Recent content on Trendlewood Times</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <lastBuildDate>Sat, 12 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Easter Egg Hunt</title>
+      <link>http://localhost:1313/events/upcoming/easter-egg-hunt/</link>
+      <pubDate>Sat, 12 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/events/upcoming/easter-egg-hunt/</guid>
+      <description>&lt;p&gt;Meet on the green for an egg hunt in the woods, followed by a picnic on the green.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Grub On The Green</title>
       <link>http://localhost:1313/events/regular/grub-on-the-green/</link>
