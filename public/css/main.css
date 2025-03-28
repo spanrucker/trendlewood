@@ -1,0 +1,139 @@
+
+        /*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+        :root {
+            --background: #ffe6be;
+            --text: #472836;
+            --soft: #47283611;
+            --accent: #D7EBBA;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text);
+            font-size: 24px;
+            font-family: "Oldenburg", serif;
+            padding: 5%;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: "Rakkas", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.1;
+        }
+
+        h1 {font-size: 4rem;}
+
+        a {color: var(--text);}
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 6rem;
+        }
+
+        section {
+            margin: 4rem 0 4rem 0;
+
+        }
+
+        section.indent {
+            border: var(--soft) 2px solid;
+            border-radius: 10px;
+            position:relative;
+            padding-top: 0.5rem;
+
+        }
+
+        section.indent h2 {
+            position:absolute;
+            left: -5px;
+            top: -20px;
+            background-color: var(--background);
+            display: block;
+            width: fit-content;
+            padding-right: 0.5rem;
+        }
+
+        article {
+            max-width: 400px;
+            border: var(--text) 2px dashed;
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem;
+        }
+
+        div.cards {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 1rem;
+        }
+
+        time {
+            font-style: italic;
+        }
+
+        p {margin-top: 1rem;}
+
+        hr {
+            border: var(--text) dashed 2px;
+            border-bottom: 0px;
+        }
+
+        @media only screen and (max-width: 520px) {
+            header {
+                font-size: 1.5rem;
+            }
+
+            header h1 {
+                font-size: 4rem;
+            }
+        }
+

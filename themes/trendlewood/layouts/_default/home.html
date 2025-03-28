@@ -1,0 +1,67 @@
+{{ define "main" }}
+  {{ .Content }}
+  {{ range site.Sections }}
+  <section>
+    <h1>{{ .LinkTitle }}</h1>
+    {{ .Summary }}
+    {{ range .Sections}}
+    <section class="indent">
+      <h2>{{.Title}}</h2>
+      <div class="cards">
+        {{ range .Pages }}
+        <article>
+            <h3>{{.Title}}</h3>
+            {{ with .Date}}<time>{{.}}</time> {{end}}
+            {{ with .Params.Regularday }}<time>{{ . }}</time>{{end}}
+            <p>{{ .Content }}</p>
+        </article>
+        {{end}}
+    </div>
+
+    </section>
+    {{ end }}
+  </section>
+  {{ end }}
+  <section>
+    <h1>What's On</h1>
+    <p>Events in the community.</p>
+    <section class="indent">
+        <h2>Regular</h2>
+        <div class="cards">
+            <article>
+                <h3>Grub on the Green</h3>
+                <time>Wednesdays from 4.30pm-6pm</time>
+                <p>Join us on the green for an early kids dinner.</p>
+            </article>
+        </div>
+    </section>
+    <section class="indent">
+        <h2>Upcoming</h2>
+        <div class="cards">
+            <article>
+                <h3>Easter Egg Hunt</h3>
+                <time>12th April 2025<br>11am&mdash;2pm</time>
+                <p>Meet on the green for an egg hunt in the woods, followed by a picnic on the green.</p>
+            </article>
+            <article>
+                <h3>Summer Gathering</h3>
+                <time>A date in the summertime</time>
+            </article>                    
+        </div>
+    </section>
+</section>
+<hr>
+<section>
+    <h1>Tried and Trusted</h1>
+    <p>Local service-people recommended by the community.</p>
+    <section class="indent">
+        <h2>Electricians</h2>
+        <div class="cards">
+            <article>
+                <h3>Marky Sparky</h3>
+                <p>Contact details</p>
+            </article>
+        </div>
+    </section>
+</section>
+{{ end }}
