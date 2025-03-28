@@ -6,13 +6,25 @@ public_folder: "/images/uploads" # The src attribute for uploaded media will beg
 collections:
   - name: "regular-events" # Used in routes, e.g., /admin/collections/blog
     label: "Regular Events" # Used in the UI
-    folder: "events/regular" # The path to the folder where the documents are stored
+    folder: "content/events/regular" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Regular Day", name: "regularday", widget: "string" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - { label: "Description", name: "body", widget: "markdown" }
+  - name: "upcoming-events" # Used in routes, e.g., /admin/collections/blog
+    label: "Upcoming Events" # Used in the UI
+    folder: "content/events/upcoming" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: true }
+      - { label: "Start Time", name: "endtime", widget: "datetime", time_format: true, required: false }
+      - { label: "End Time", name: "starttime", widget: "datetime", time_format: true, required: false }
+      - { label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - { label: "Description", name: "body", widget: "markdown" }
